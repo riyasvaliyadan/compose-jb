@@ -78,11 +78,10 @@ Run native macos sample:
 
 ## Multiplatform build
 
-```console
-./compose/frameworks/support/jbdeps/android-sdk/downloadAndroidSdk
-export COMPOSE_CUSTOM_VERSION=1.1.0-beta04
-./scripts/publishToMavenLocal -Pcompose.platforms=all
-./scripts/publishGradlePluginToMavenLocal
+```bash
+export COMPOSE_CUSTOM_VERSION=0.0.0-deploy &&\
+./scripts/publishToMavenLocal -Pcompose.platforms=all &&\
+./scripts/publishGradlePluginToMavenLocal &&\
 ./scripts/publishWebComponentsToMavenLocal
 ```
 `-Pcompose.platforms=all` could be replace with comma-separated list of platforms, such as `js,jvm,androidDebug,androidRelease,macosx64,uikitx64`.

@@ -13,7 +13,7 @@ import org.jetbrains.compose.experimental.uikit.tasks.AbstractComposeIosTask
 internal val Project.iosDeployExecutable get() = iosDeploySrc.resolve("build/Release/ios-deploy")
 
 private const val IOS_DEPLOY_GIT = "https://github.com/ios-control/ios-deploy.git"
-private const val IOS_DEPLOY_TAG = "1.11.4"
+private const val IOS_DEPLOY_TAG = "1.12.0"
 private val Project.iosDeploySrc get() = rootProject.buildDir.resolve("ios-deploy-$IOS_DEPLOY_TAG-src")
 
 internal fun Project.configureInstallIosDeployTask() =
